@@ -1,0 +1,90 @@
+/* Wrapper to handle the floating effect */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* The Pill-Shaped Container */
+.navbar-container {
+  width: 95%;
+  max-width: 1200px;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px; /* Makes it pill-shaped */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px 8px 24px;
+}
+
+/* Logo and Icon */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-icon {
+  height: 35px;
+  filter: drop-shadow(0 0 5px rgba(255, 68, 0, 0.5));
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Centered Links */
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* The Orange Capsule Button */
+.contact-btn {
+  background: #dc2626; /* Vibrant orange-red */
+  color: #fff !important;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px #dc2626;
+}
+
+.contact-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px #dc2626;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Add a hamburger menu logic if needed */
+  }
+}
