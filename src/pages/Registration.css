@@ -226,3 +226,22 @@ button:disabled {
   border-radius: 18px;
   background: #fff;
 }
+
+.zoho-open-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--primary-red);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.zoho-open-btn:hover {
+  background: var(--hover-red);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.35);
+}
