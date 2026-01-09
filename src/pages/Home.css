@@ -65,17 +65,24 @@
 }
 
 .cta-secondary {
-  border: 2px solid #fff;
+background: #dc2626;
   color: #fff;
   padding: 15px 40px;
   border-radius: 100px;
   font-weight: 700;
   text-decoration: none;
   transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+.cta-secondary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
 }
 
 .cta-primary:hover {
-  background: #b91c1c;
+  color: #000;
+  background: #fff;
   transform: translateY(-3px);
 }
 
