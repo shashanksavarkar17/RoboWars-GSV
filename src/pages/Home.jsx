@@ -21,8 +21,8 @@ const Home = () => {
               UNLEASH THE <span>BEAST</span>
             </h1>
             <p className="hero-description">
-              India's fiercest combat robotics tournament is back. Witness the
-              clash of titanium and electricity.
+              Gati Shakti Vishwavidyalaya's fiercest combat robotics tournament
+              is back. Witness the clash of titanium and electricity.
             </p>
             <div className="hero-btns">
               <Link to="/register" className="cta-primary">
