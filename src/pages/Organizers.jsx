@@ -7,93 +7,144 @@ import "./Organizers.css";
 import Aman from "../assets/Aman.jpg";
 import Arpit from "../assets/Arpit.jpg";
 import Pranjal from "../assets/Pranjal.png";
+// import Saurabh from "../assets/Saurabh.jpg";
+import Shashank from "../assets/Shashank.jpg";
+import Lehar from "../assets/Lehar.jpg";
 
 const organizers = [
-    {
-        id: 1,
-        name: "Arpit Srivastava",
-        role: "Overlooking Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
-        image: Arpit,
-        phone: <a href={"tel:9696579460"}>+91 - 9696579460</a>,
-        email: <a href={"mailto:aman.choudhary_btech23@gsv.ac.in"}>aman.choudhary_btech23@gsv.ac.in</a>,
-    },
-    {
-        id: 2,
-        name: "Aman Choudhary",
-        role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
-        image: Aman,
-        phone: <a href={"tel:7987347287"}>+91 - 7987347287</a>,
-        email: <a href={"mailto:arpit.srivastava_btech23@gsv.ac.in"}>arpit.srivastava_btech23@gsv.ac.in</a>,
-    },
-    {
-        id: 3,
-        name: "Pranjal Chaturvedi",
-        role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
-        image: Pranjal,
-        phone: <a href={"tel:7878330376"}>+91-7878330376</a>,
-        email: <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>pranjal.chaturvedi_btech24@gsv.ac.in</a>,
-    },
+  {
+    id: 1,
+    name: "Arpit Srivastava",
+    role: "Overlooking Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+    image: Arpit,
+    phone: <a href={"tel:9696579460"}>+91 - 9696579460</a>,
+    email: (
+      <a href={"mailto:aman.choudhary_btech23@gsv.ac.in"}>
+        aman.choudhary_btech23@gsv.ac.in
+      </a>
+    ),
+  },
+  {
+    id: 2,
+    name: "Aman Choudhary",
+    role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
+    image: Aman,
+    phone: <a href={"tel:7987347287"}>+91 - 7987347287</a>,
+    email: (
+      <a href={"mailto:arpit.srivastava_btech23@gsv.ac.in"}>
+        arpit.srivastava_btech23@gsv.ac.in
+      </a>
+    ),
+  },
+  {
+    id: 3,
+    name: "Pranjal Chaturvedi",
+    role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+    image: Pranjal,
+    phone: <a href={"tel:7878330376"}>+91-7878330376</a>,
+    email: (
+      <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
+        pranjal.chaturvedi_btech24@gsv.ac.in
+      </a>
+    ),
+  },
+  {
+    id: 4,
+    name: "Lehar Gupta",
+    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+    image: Lehar,
+    phone: <a href={"tel:6376849212"}>+91-6376849212</a>,
+    email: (
+      <a href={"mailto:lehar.gupta_btech24@gsv.ac.in"}>
+        lehar.gupta_btech24@gsv.ac.in
+      </a>
+    ),
+  },
+  {
+    id: 5,
+    name: "Shashank Savarkar",
+    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+    image: Shashank,
+    phone: <a href={"tel:7410075050"}>+91-7410075050</a>,
+    email: (
+      <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
+        savarkar.shashank_btech24@gsv.ac.in
+      </a>
+    ),
+  },
+  //   {
+  //     id: 6,
+  //     name: "Saurabh Ahire",
+  //     role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+  //     image: Saurabh,
+  //     phone: <a href={"tel:9322040278"}>+91-9322040278</a>,
+  //     email: (
+  //       <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
+  //         x.x_btech25@gsv.ac.in
+  //       </a>
+  //     ),
+  //   },
 ];
 
 const Organizers = () => {
-    const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState(null);
 
-    const handleToggle = (id) => {
-        setActiveCard(activeCard === id ? null : id);
-    };
+  const handleToggle = (id) => {
+    setActiveCard(activeCard === id ? null : id);
+  };
 
-    return (
-        <>
-            <Navbar />
+  return (
+    <>
+      <Navbar />
 
-            <div className="organizers-wrapper">
-                <h1 className="organizers-title">
-                    Meet Our <span>Team</span>
-                </h1>
+      <div className="organizers-wrapper">
+        <h1 className="organizers-title">
+          Meet Our <span>Team</span>
+        </h1>
 
-                <div className="organizers-grid">
-                    {organizers.map((person) => {
-                        const isExpanded = activeCard === person.id;
+        <div className="organizers-grid">
+          {organizers.map((person) => {
+            const isExpanded = activeCard === person.id;
 
-                        return (
-                            <div
-                                key={person.id}
-                                className={`organizer-card ${isExpanded ? "expanded" : ""}`}
-                            >
-                                <div className="image-container">
-                                    <img src={person.image} alt={person.name} />
-                                </div>
-
-                                <h3>{person.name}</h3>
-                                <p>{person.role}</p>
-
-                                {/* CONTACT DETAILS (EXPAND AREA) */}
-                                {isExpanded && (
-                                    <div className="contact-details">
-                                        <p>
-                                            <strong>Phone:</strong> {person.phone}
-                                        </p>
-                                        <p>
-                                            <strong>Email:</strong> {person.email}
-                                        </p>
-                                    </div>
-                                )}
-
-                                <div
-                                    className="social-pill"
-                                    onClick={() => handleToggle(person.id)}
-                                >
-                                    {isExpanded ? "Close" : "Contact"}
-                                </div>
-                            </div>
-                        );
-                    })}
+            return (
+              <div
+                key={person.id}
+                className={`organizer-card ${isExpanded ? "expanded" : ""}`}
+              >
+                <div className="image-container">
+                  <img src={person.image} alt={person.name} />
                 </div>
-            </div>
 
-            <Footer />
-        </>
-    );
+                <h3>{person.name}</h3>
+                <p>{person.role}</p>
+
+                {/* CONTACT DETAILS (EXPAND AREA) */}
+                {isExpanded && (
+                  <div className="contact-details">
+                    <p>
+                      <strong>Phone:</strong> {person.phone}
+                    </p>
+                    <p>
+                      <strong>Email:</strong> {person.email}
+                    </p>
+                  </div>
+                )}
+
+                <div
+                  className="social-pill"
+                  onClick={() => handleToggle(person.id)}
+                >
+                  {isExpanded ? "Close" : "Contact"}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export default Organizers;
