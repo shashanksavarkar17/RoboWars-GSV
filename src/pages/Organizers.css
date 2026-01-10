@@ -98,3 +98,9 @@
   background: var(--primary-orange);
   color: #fff;
 }
+.work-styling {
+  color: #ffbb99;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}

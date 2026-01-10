@@ -7,7 +7,7 @@ import "./Organizers.css";
 import Aman from "../assets/Aman.jpg";
 import Arpit from "../assets/Arpit.jpg";
 import Pranjal from "../assets/Pranjal.png";
-// import Saurabh from "../assets/Saurabh.jpg";
+import Saurabh from "../assets/Saurabh.png";
 import Shashank from "../assets/Shashank.jpg";
 import Lehar from "../assets/Lehar.jpg";
 
@@ -16,10 +16,11 @@ const organizers = [
     id: 1,
     name: "Arpit Srivastava",
     role: "Overlooking Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Event Head",
     image: Arpit,
     phone: <a href={"tel:9696579460"}>+91 - 9696579460</a>,
     email: (
-      <a href={"mailto:aman.choudhary_btech23@gsv.ac.in"}>
+      <a href={"mailto:arpit.srivastava_btech23@gsv.ac.in"}>
         aman.choudhary_btech23@gsv.ac.in
       </a>
     ),
@@ -28,10 +29,11 @@ const organizers = [
     id: 2,
     name: "Aman Choudhary",
     role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Event Head",
     image: Aman,
     phone: <a href={"tel:7987347287"}>+91 - 7987347287</a>,
     email: (
-      <a href={"mailto:arpit.srivastava_btech23@gsv.ac.in"}>
+      <a href={"mailto:aman.choudhary_btech23@gsv.ac.in"}>
         arpit.srivastava_btech23@gsv.ac.in
       </a>
     ),
@@ -40,6 +42,7 @@ const organizers = [
     id: 3,
     name: "Pranjal Chaturvedi",
     role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Event Head",
     image: Pranjal,
     phone: <a href={"tel:7878330376"}>+91-7878330376</a>,
     email: (
@@ -52,6 +55,7 @@ const organizers = [
     id: 4,
     name: "Lehar Gupta",
     role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Media Publicity",
     image: Lehar,
     phone: <a href={"tel:6376849212"}>+91-6376849212</a>,
     email: (
@@ -62,8 +66,22 @@ const organizers = [
   },
   {
     id: 5,
+    name: "Saurabh Ahire",
+    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Graphics Desginer",
+    image: Saurabh,
+    phone: <a href={"tel:9322040278"}>+91-9322040278</a>,
+    email: (
+      <a href={"mailto:saurabh.ahire_btech25@gsv.ac.in"}>
+        saurabh.ahire_btech25@gsv.ac.in
+      </a>
+    ),
+  },
+  {
+    id: 6,
     name: "Shashank Savarkar",
     role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+    work: "Website Author",
     image: Shashank,
     phone: <a href={"tel:7410075050"}>+91-7410075050</a>,
     email: (
@@ -72,18 +90,6 @@ const organizers = [
       </a>
     ),
   },
-  //   {
-  //     id: 6,
-  //     name: "Saurabh Ahire",
-  //     role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
-  //     image: Saurabh,
-  //     phone: <a href={"tel:9322040278"}>+91-9322040278</a>,
-  //     email: (
-  //       <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
-  //         x.x_btech25@gsv.ac.in
-  //       </a>
-  //     ),
-  //   },
 ];
 
 const Organizers = () => {
@@ -117,6 +123,7 @@ const Organizers = () => {
 
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>
+                <h1 className="work-styling">{person.work}</h1>
 
                 {/* CONTACT DETAILS (EXPAND AREA) */}
                 {isExpanded && (
