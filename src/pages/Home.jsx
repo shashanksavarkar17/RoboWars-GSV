@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+import HomeImg from "../assets/Home_Page.png";
+
 const Home = () => {
   return (
     <>
@@ -11,18 +13,24 @@ const Home = () => {
       <div className="home-wrapper">
         {/* Cinematic Hero Section */}
         <section className="hero">
-          <div className="hero-overlay"></div>
-          {/* Add a background video link or a high-res battle image */}
+          <img src={HomeImg} alt="RoboWars Hero" className="hero-bg" />
+
           <div className="hero-content">
             <span className="hero-subtitle">The Ultimate Metal Mayhem</span>
-            <h1 className="hero-title">UNLEASH THE <span>BEAST</span></h1>
+            <h1 className="hero-title">
+              UNLEASH THE <span>BEAST</span>
+            </h1>
             <p className="hero-description">
-              India's fiercest combat robotics tournament is back. 
-              Witness the clash of titanium and electricity.
+              India's fiercest combat robotics tournament is back. Witness the
+              clash of titanium and electricity.
             </p>
             <div className="hero-btns">
-              <Link to="/register" className="cta-primary">Enter the Arena</Link>
-              <Link to="/media" className="cta-secondary">Watch Trailer</Link>
+              <Link to="/register" className="cta-primary">
+                Enter the Arena
+              </Link>
+              <Link to="/media" className="cta-secondary">
+                Watch Trailer
+              </Link>
             </div>
           </div>
         </section>
