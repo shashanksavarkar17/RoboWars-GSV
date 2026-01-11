@@ -1,7 +1,6 @@
 .timeline-page {
   background: #000;
   min-height: 100vh;
-  /* Space for the floating pill navbar */
   padding: 140px 5% 80px;
   color: #fff;
   font-family: 'Inter', sans-serif;
@@ -30,7 +29,6 @@
   color: #dc2626;
 }
 
-/* Timeline Track */
 .timeline-container {
   position: relative;
   max-width: 800px;
@@ -47,7 +45,6 @@
   background: rgba(220, 38, 38, 0.2);
 }
 
-/* Individual Items */
 .timeline-item {
   position: relative;
   padding-left: 60px;
@@ -67,7 +64,6 @@
   transition: 0.3s;
 }
 
-/* Status Based Glows */
 .timeline-item.completed .timeline-dot {
   background: #dc2626;
   border-color: #dc2626;
@@ -80,7 +76,6 @@
   animation: pulse-red 2s infinite;
 }
 
-/* Content Cards */
 .timeline-content {
   background: rgba(15, 15, 15, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -116,14 +111,12 @@
   line-height: 1.6;
 }
 
-/* Animations */
 @keyframes pulse-red {
   0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
   70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
   100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
 }
 
-/* Desktop alignment (Optional: Alternating sides) */
 @media (min-width: 768px) {
   .timeline-track {
     left: 50%;
@@ -144,3 +137,15 @@
     padding-right: 40px;
   }
 }
+.coming-soon-container{
+  cursor: default;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 25rem;
+}
+.coming-soon-text{
+  color: red;
+}.coming-soon-text:hover {
+   color: #ffffff;
+ }

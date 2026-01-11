@@ -1,4 +1,3 @@
-/* ===== PAGE WRAPPER ===== */
 .rules-page {
   min-height: 100vh;
   background: radial-gradient(circle at center, #1a0800, #000);
@@ -6,7 +5,6 @@
   color: #ffffff;
 }
 
-/* ===== HEADER ===== */
 .rules-header {
   max-width: 1100px;
   margin: 0 auto 70px;
@@ -32,7 +30,6 @@
   color: #dc2626;
 }
 
-/* ===== DOWNLOAD BUTTON ===== */
 .rules-download {
   display: flex;
   justify-content: center;
@@ -55,7 +52,6 @@
   transform: translateY(-2px);
 }
 
-/* ===== RULES GRID ===== */
 .rules-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -64,7 +60,6 @@
   gap: 26px;
 }
 
-/* ===== RULE CARD ===== */
 .rule-card {
   background: rgba(10, 10, 10, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -75,7 +70,6 @@
   opacity: 0;
 }
 
-/* ===== CARD HEADER ===== */
 .rule-card-header {
   display: flex;
   align-items: center;
@@ -102,7 +96,6 @@
   color: #ffffff;
 }
 
-/* ===== RULE LIST ===== */
 .rule-list {
   list-style: none;
   padding-left: 0;
@@ -117,7 +110,6 @@
   opacity: 0.95;
 }
 
-/* ===== DISCLAIMER ===== */
 .rules-disclaimer {
   margin-top: 70px;
   text-align: center;
@@ -126,7 +118,6 @@
   color: #f87171;
 }
 
-/* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
   from {
     transform: translateY(20px);
@@ -138,7 +129,6 @@
   }
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .rules-header h1 {
     font-size: 2.2rem;

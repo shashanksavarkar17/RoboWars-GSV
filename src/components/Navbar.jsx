@@ -6,17 +6,15 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrapper">
       <div className="navbar-container">
-        {/* Logo Section */}
         <div className="logo-section">
           <img
-            src="./assets/RED_LOGO.png"
+            src="../assets/RED_LOGO.png"
             alt="Robowars Logo"
             className="navbar-icon"
           />
           <div className="logo">ROBOWARS</div>
         </div>
 
-        {/* Navigation Links */}
         <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>
@@ -35,7 +33,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Action Button */}
         <div className="nav-actions">
           <Link className="contact-btn" to="/register">
             Register Now!

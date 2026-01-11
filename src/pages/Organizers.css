@@ -7,7 +7,6 @@
 .organizers-wrapper {
   min-height: 100vh;
   background: #000;
-  /* Push content down to avoid the floating Navbar */
   padding: 140px 5% 80px;
   text-align: center;
 }
@@ -24,7 +23,6 @@
   color: var(--primary-orange);
 }
 
-/* Grid Layout */
 .organizers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -33,7 +31,6 @@
   margin: 0 auto;
 }
 
-/* Glassmorphism Cards */
 .organizer-card {
   background: var(--glass-bg);
   border: 1px solid var(--card-border);
@@ -49,7 +46,6 @@
   box-shadow: 0 15px 30px rgba(255, 77, 0, 0.15);
 }
 
-/* Image Styling */
 .image-container {
   width: 120px;
   height: 120px;
@@ -79,7 +75,6 @@
   font-weight: 500;
 }
 
-/* Pill Element matching Navbar buttons */
 .social-pill {
   display: inline-block;
   padding: 8px 25px;

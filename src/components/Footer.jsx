@@ -3,60 +3,54 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-inner">
-        {/* Left */}
-        <p className="footer-copy">
-          © 2026 RoboWars EPITOME'26. All Rights Reserved.
-        </p>
+      <footer className="footer glass-footer">
+        <div className="footer-inner">
+          <p className="footer-copy">
+            © 2026 RoboWars EPITOME'26. All Rights Reserved.
+          </p>
 
-        {/* Center Logo */}
-        <div className="footer-logo">
-          <img src="../assets/Footer.png" alt="RoboWars EPITOME 26" />
-        </div>
-
-        {/* Right */}
-        <div className="footer-right">
-          <div className="footer-social">
-            <a
-              href="https://www.yourcollege.edu"
-              target="_blank"
-              rel="noreferrer"
-              className="icon clg"
-              aria-label="College Website"
-            />
-
-            <a
-              href="https://instagram.com/robonity"
-              target="_blank"
-              rel="noreferrer"
-              className="icon ig-red"
-              aria-label="Instagram Robowars"
-            />
-
-            <a
-              href="https://instagram.com/technocratsgsv"
-              target="_blank"
-              rel="noreferrer"
-              className="icon ig-tc"
-              aria-label="Instagram Technocrats"
-            />
-
-            <a
-              href="https://linkedin.com/company/technocrats-gsv"
-              target="_blank"
-              rel="noreferrer"
-              className="icon linkedin"
-              aria-label="LinkedIn"
-            />
+          <div className="footer-logo">
+            <img src="../assets/RED_LOGO.png" alt="RoboWars EPITOME 26" />
           </div>
 
-          <a href="/terms" className="footer-terms">
-            Terms & Privacy
-          </a>
+          <div className="footer-bottom">
+            <div className="footer-social">
+              <a
+                  href="https://gsv.ac.in/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon clg"
+                  aria-label="GSV"
+              />
+              <a
+                  href="https://www.instagram.com/robotics.gsv/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon ig-red"
+                  aria-label="RED Instagram"
+              />
+              <a
+                  href="https://instagram.com/technocrats.gsv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon ig-tc"
+                  aria-label="TC Instagram"
+              />
+              <a
+                  href="https://www.linkedin.com/in/technocrats-gsv-4a7abb269/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon linkedin"
+                  aria-label="TC LinkedIn"
+              />
+            </div>
+
+            <a href="/terms" className="footer-terms">
+              Terms & Privacy
+            </a>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 

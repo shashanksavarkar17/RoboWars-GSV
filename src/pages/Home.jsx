@@ -11,7 +11,6 @@ const Home = () => {
     <>
       <Navbar />
       <div className="home-wrapper">
-        {/* Cinematic Hero Section */}
         <section className="hero">
           <img src={HomeImg} alt="RoboWars Hero" className="hero-bg" />
 
@@ -35,7 +34,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Dynamic News Ticker */}
         <div className="news-ticker">
           <div className="ticker-wrap">
             <div className="ticker-item">Registration is LIVE!</div>
@@ -45,7 +43,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Feature Highlights */}
         <section className="highlights">
           <div className="highlight-card">
             <h2>50+</h2>
