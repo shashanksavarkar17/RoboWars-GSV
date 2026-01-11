@@ -29,6 +29,7 @@
 }
 
 .navbar-icon {
+  background-image: url("../assets/RED_LOGO.png");
   height: 35px;
   filter: drop-shadow(0 0 5px rgba(255, 68, 0, 0.5));
 }

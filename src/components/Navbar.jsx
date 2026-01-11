@@ -7,11 +7,7 @@ const Navbar = () => {
     <nav className="navbar-wrapper">
       <div className="navbar-container">
         <div className="logo-section">
-          <img
-            src="../assets/RED_LOGO.png"
-            alt="Robowars Logo"
-            className="navbar-icon"
-          />
+          <img src="../assets/RED_LOGO.png" alt="Robowars Logo" className="navbar-icon"/>
           <div className="logo">ROBOWARS</div>
         </div>
 
