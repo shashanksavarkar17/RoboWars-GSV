@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import "./Registration.css";
+import { registrationData } from "../seed";
 
 const Registration = () => {
   const openZohoForm = () => {
-    const url =
-      "https://forms.zohopublic.in/operagxshashank17gm1/form/InternshipStudentInformationForm/formperma/nhMsMjM-26-9jmeUuaQVGJ4e13Ahz8OivB-uFgwY30Y";
+    const url = registrationData.formUrl;
 
     const width = 700;
     const height = 650;
@@ -31,7 +30,7 @@ const Registration = () => {
 
   return (
     <>
-      <Navbar />
+
 
       <div className="register-wrapper">
         <div className="register-card google-form-card">
@@ -53,7 +52,7 @@ const Registration = () => {
         </div>
       </div>
 
-      <Footer />
+
     </>
   );
 };

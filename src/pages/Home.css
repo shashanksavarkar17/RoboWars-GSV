@@ -1,159 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
 .home-wrapper {
-  background: #000;
+  background: #050505;
   color: #fff;
   overflow-x: hidden;
+  position: relative;
 }
 
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* Dark overlay vignette */
+  background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.8) 90%);
 }
-.hero-bg {
+
+.hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-
-  z-index: 1;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #050505);
   z-index: 2;
+  pointer-events: none;
 }
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  /* Taller for parallax */
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6) contrast(1.2);
+}
+
 .hero-content {
   position: relative;
   z-index: 3;
-
-  max-width: 900px;
+  max-width: 1000px;
   padding: 0 20px;
 }
-
 
 .hero-subtitle {
   color: #dc2626;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 800;
+  letter-spacing: 8px;
+  font-weight: 700;
   display: block;
-  margin-bottom: 15px;
-  animation: fadeInDown 1s ease;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
 }
 
 .hero-title {
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(3.5rem, 12vw, 8rem);
   font-weight: 900;
-  line-height: 1;
-  margin-bottom: 20px;
+  line-height: 0.9;
+  margin-bottom: 25px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
 }
 
 .hero-title span {
-  color: #dc2626;
-  text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+  color: #fff;
+  /* Reset color for cleaner split */
+  display: inline-block;
 }
 
 .hero-description {
   max-width: 600px;
-  margin: 0 auto 40px;
-  color: #ccc;
-  font-size: 1.2rem;
+  margin: 0 auto 50px;
+  color: #a0a0a0;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
+/* BUTTONS */
 .hero-btns {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
+}
+
+.cta-btn {
+  padding: 16px 45px;
+  border-radius: 4px;
+  /* Techy sharp edges */
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
 .cta-primary {
   background: #dc2626;
   color: #fff;
-  padding: 15px 40px;
-  border-radius: 100px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
-}
-
-.cta-secondary {
-background: #dc2626;
-  color: #fff;
-  padding: 15px 40px;
-  border-radius: 100px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
-}
-.cta-secondary:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-3px);
+  border: 1px solid #dc2626;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
 }
 
 .cta-primary:hover {
-  color: #000;
+  background: transparent;
+  color: #dc2626;
+  box-shadow: 0 0 40px rgba(220, 38, 38, 0.5);
+  text-shadow: 0 0 8px rgba(220, 38, 38, 0.8);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-secondary:hover {
   background: #fff;
-  transform: translateY(-3px);
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* TICKER */
+.news-ticker-container {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
 }
 
 .news-ticker {
-  background: #dc2626;
-  padding: 15px 0;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.ticker-wrap {
+.ticker-track {
   display: inline-block;
-  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+  animation: ticker 25s linear infinite;
 }
 
 .ticker-item {
   display: inline-block;
-  padding: 0 50px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-style: italic;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 60px;
+  opacity: 0.8;
 }
 
+.ticker-bullet {
+  color: #dc2626;
+  margin-right: 10px;
+}
+
+/* HIGHLIGHTS */
 .highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  padding: 100px 10%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 100px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.highlight-card {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.highlight-card:hover {
+  background: rgba(30, 30, 30, 0.8);
+  border-color: rgba(220, 38, 38, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-glitch-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #dc2626;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover .card-glitch-effect {
+  transform: scaleX(1);
 }
 
 .highlight-card h2 {
-  font-size: 4rem;
-  color: #dc2626;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  color: #fff;
   margin-bottom: 10px;
+  text-shadow: 4px 4px 0px rgba(220, 38, 38, 0.2);
 }
 
 .highlight-card p {
   color: #888;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
 }
 
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .ticker-track {
+    animation-duration: 15s;
+  }
 }

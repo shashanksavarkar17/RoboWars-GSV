@@ -1,0 +1,101 @@
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+
+const ParticleBackground = () => {
+    const particlesInit = useCallback(async (engine) => {
+        await loadSlim(engine);
+    }, []);
+
+    return (
+        <Particles
+            id="tsparticles"
+            init={particlesInit}
+            options={{
+                fullScreen: { enable: false }, // confined to container
+                background: {
+                    color: {
+                        value: "transparent",
+                    },
+                },
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onHover: {
+                            enable: true,
+                            mode: "grab", // Lines connect to cursor
+                        },
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        grab: {
+                            distance: 200,
+                            line_linked: {
+                                opacity: 0.8,
+                            },
+                        },
+                        push: {
+                            quantity: 4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#dc2626", // Theme red
+                    },
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.2,
+                        width: 1,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800,
+                        },
+                        value: 60,
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 3 },
+                    },
+                },
+                detectRetina: true,
+            }}
+            style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                borderRadius: "inherit",
+                zIndex: 1, // Above bg image, below content
+                pointerEvents: "none", // Let interactions pass through if needed, but 'grab' needs events
+            }}
+            className="particle-canvas"
+        />
+    );
+};
+
+export default ParticleBackground;

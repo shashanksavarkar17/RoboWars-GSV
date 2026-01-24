@@ -1,83 +1,90 @@
-// import React from "react";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
-// import "./Timeline.css";
-//
-// const timelineData = [
-//   {
-//     date: "10 Jan 2025",
-//     title: "Registration Opens",
-//     description: "Early bird registrations begin for all weight categories.",
-//     status: "completed"
-//   },
-//   {
-//     date: "05 Feb 2025",
-//     title: "Team Briefing",
-//     description: "Virtual orientation and rulebook clarification session.",
-//     status: "active"
-//   },
-//   {
-//     date: "15 Feb 2025",
-//     title: "Technical Inspection",
-//     description: "Safety checks and weight verification of the robots.",
-//     status: "upcoming"
-//   },
-//   {
-//     date: "20 Feb 2025",
-//     title: "The Main Event",
-//     description: "Knockout rounds and Grand Finale at the main arena.",
-//     status: "upcoming"
-//   }
-// ];
-//
-// const Timeline = () => {
-//   return (
-//     <>
-//       <Navbar />
-//       <div className="timeline-page">
-//         <div className="timeline-header">
-//           <span className="subtitle">Event Roadmap</span>
-//           <h1>Battle <span>Timeline</span></h1>
-//         </div>
-//
-//         <div className="timeline-container">
-//           {/* Vertical Line */}
-//           <div className="timeline-track"></div>
-//
-//           {timelineData.map((item, index) => (
-//             <div key={index} className={`timeline-item ${item.status}`}>
-//               <div className="timeline-dot"></div>
-//               <div className="timeline-content">
-//                 <span className="event-date">{item.date}</span>
-//                 <h3>{item.title}</h3>
-//                 <p>{item.description}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//       <Footer />
-//     </>
-//   );
-// };
-//
-// export default Timeline;
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./Timeline.css";
+import { timelineData } from "../seed";
+import AnimatedPage from "../components/AnimatedPage";
 
-import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "./Media.css";
+gsap.registerPlugin(ScrollTrigger);
 
-const Media = () => {
+const Timeline = () => {
+  const lineRef = useRef(null);
+
+  useEffect(() => {
+    // Animate the vertical line height on scroll
+    gsap.fromTo(
+      lineRef.current,
+      { height: "0%" },
+      {
+        height: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".timeline-container",
+          start: "top center",
+          end: "bottom center",
+          scrub: 1,
+        },
+      }
+    );
+
+    // Fade in items
+    const items = document.querySelectorAll(".timeline-item");
+    items.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-      <>
-        <Navbar />
-        <div className="coming-soon-container">
-          <h1 className="coming-soon-text">Coming Soon !!</h1>
+    <AnimatedPage>
+      <div className="timeline-page">
+        <div className="timeline-header">
+          <span className="subtitle">Tournament Roadmap</span>
+          <h1>
+            BATTLE <span>TIMELINE</span>
+          </h1>
+          <p className="description">The path to glory is paved with metal and sparks.</p>
         </div>
-        {<Footer />}
-      </>
+
+        <div className="timeline-container">
+          <div className="timeline-track-bg"></div>
+          <div ref={lineRef} className="timeline-track-fill"></div>
+
+          {timelineData.map((item, index) => (
+            <div
+              key={index}
+              className={`timeline-item ${item.status}`}
+            >
+              <div className="timeline-dot-wrapper">
+                <div className="timeline-dot"></div>
+                <div className="timeline-dot-pulse"></div>
+              </div>
+
+              <div className="timeline-content clickable">
+                <div className="content-glow"></div>
+                <span className="event-date">{item.date}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div className="status-badge">{item.status}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </AnimatedPage>
   );
 };
 
-export default Media;
+export default Timeline;

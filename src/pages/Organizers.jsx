@@ -1,96 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import gsap from "gsap";
 import "./Organizers.css";
-
-// Avatar
-import Aman from "../assets/Aman.jpg";
-import Arpit from "../assets/Arpit.jpg";
-import Pranjal from "../assets/Pranjal.png";
-import Saurabh from "../assets/Saurabh.png";
-import Shashank from "../assets/Shashank.jpg";
-import Lehar from "../assets/Lehar.jpg";
-
-const organizers = [
-  {
-    id: 1,
-    name: "Arpit Srivastava",
-    role: "Overlooking Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Event Head",
-    image: Arpit,
-    phone: <a href={"tel:9696579460"}>+91 - 9696579460</a>,
-    email: (
-      <a href={"mailto:arpit.srivastava_btech23@gsv.ac.in"}>
-        aman.choudhary_btech23@gsv.ac.in
-      </a>
-    ),
-  },
-  {
-    id: 2,
-    name: "Aman Choudhary",
-    role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Event Head",
-    image: Aman,
-    phone: <a href={"tel:7987347287"}>+91 - 7987347287</a>,
-    email: (
-      <a href={"mailto:aman.choudhary_btech23@gsv.ac.in"}>
-        arpit.srivastava_btech23@gsv.ac.in
-      </a>
-    ),
-  },
-  {
-    id: 3,
-    name: "Pranjal Chaturvedi",
-    role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Event Head",
-    image: Pranjal,
-    phone: <a href={"tel:7878330376"}>+91-7878330376</a>,
-    email: (
-      <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
-        pranjal.chaturvedi_btech24@gsv.ac.in
-      </a>
-    ),
-  },
-  {
-    id: 4,
-    name: "Lehar Gupta",
-    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Media Publicity",
-    image: Lehar,
-    phone: <a href={"tel:6376849212"}>+91-6376849212</a>,
-    email: (
-      <a href={"mailto:lehar.gupta_btech24@gsv.ac.in"}>
-        lehar.gupta_btech24@gsv.ac.in
-      </a>
-    ),
-  },
-  {
-    id: 5,
-    name: "Saurabh Ahire",
-    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Graphics Desginer",
-    image: Saurabh,
-    phone: <a href={"tel:9322040278"}>+91-9322040278</a>,
-    email: (
-      <a href={"mailto:saurabh.ahire_btech25@gsv.ac.in"}>
-        saurabh.ahire_btech25@gsv.ac.in
-      </a>
-    ),
-  },
-  {
-    id: 6,
-    name: "Shashank Savarkar",
-    role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
-    work: "Website Author",
-    image: Shashank,
-    phone: <a href={"tel:7410075050"}>+91-7410075050</a>,
-    email: (
-      <a href={"mailto:pranjal.chaturvedi_btech24@gsv.ac.in"}>
-        savarkar.shashank_btech24@gsv.ac.in
-      </a>
-    ),
-  },
-];
+import { organizersData } from "../seed";
+import AnimatedPage from "../components/AnimatedPage";
 
 const Organizers = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -99,58 +11,86 @@ const Organizers = () => {
     setActiveCard(activeCard === id ? null : id);
   };
 
-  return (
-    <>
-      <Navbar />
+  const handleMouseMove = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
 
+    gsap.to(card, {
+      rotateX: rotateX,
+      rotateY: rotateY,
+      duration: 0.5,
+      ease: "power2.out",
+      transformPerspective: 1000,
+    });
+  };
+
+  const handleMouseLeave = (e) => {
+    gsap.to(e.currentTarget, {
+      rotateX: 0,
+      rotateY: 0,
+      duration: 0.5,
+      ease: "power2.out",
+    });
+  };
+
+  return (
+    <AnimatedPage>
       <div className="organizers-wrapper">
         <h1 className="organizers-title">
-          Meet Our <span>Team</span>
+          Command <span>Crew</span>
         </h1>
 
         <div className="organizers-grid">
-          {organizers.map((person) => {
+          {organizersData.map((person) => {
             const isExpanded = activeCard === person.id;
 
             return (
               <div
                 key={person.id}
                 className={`organizer-card ${isExpanded ? "expanded" : ""}`}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
               >
+                <div className="card-holo-overlay"></div>
                 <div className="image-container">
                   <img src={person.image} alt={person.name} />
+                  <div className="img-scanner-line"></div>
                 </div>
 
                 <h3>{person.name}</h3>
-                <p>{person.role}</p>
+                <p className="role-text">{person.role}</p>
                 <h1 className="work-styling">{person.work}</h1>
 
                 {/* CONTACT DETAILS (EXPAND AREA) */}
                 {isExpanded && (
                   <div className="contact-details">
                     <p>
-                      <strong>Phone:</strong> {person.phone}
+                      <strong>Comms:</strong> <a href={`tel:${person.phone}`} className="clickable">+91 - {person.phone}</a>
                     </p>
                     <p>
-                      <strong>Email:</strong> {person.email}
+                      <strong>Uplink:</strong> <a href={`mailto:${person.email}`} className="clickable">{person.email}</a>
                     </p>
                   </div>
                 )}
 
                 <div
-                  className="social-pill"
+                  className="social-pill clickable"
                   onClick={() => handleToggle(person.id)}
                 >
-                  {isExpanded ? "Close" : "Contact"}
+                  {isExpanded ? "CLOSE" : "CONTACT"}
                 </div>
               </div>
             );
           })}
         </div>
       </div>
-
-      <Footer />
-    </>
+    </AnimatedPage>
   );
 };
 
