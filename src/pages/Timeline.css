@@ -212,7 +212,22 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .timeline-page {
+    padding: 100px 20px 40px;
+  }
+
+  .timeline-header h1 {
+    font-size: 2rem;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+    /* More space for content */
+  }
+}
+
+@media (min-width: 769px) {
 
   .timeline-track-bg,
   .timeline-track-fill {

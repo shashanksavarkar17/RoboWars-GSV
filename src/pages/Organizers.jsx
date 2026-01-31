@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import gsap from "gsap";
+
 import "./Organizers.css";
 import { organizersData } from "../seed";
 import AnimatedPage from "../components/AnimatedPage";
@@ -11,33 +11,7 @@ const Organizers = () => {
     setActiveCard(activeCard === id ? null : id);
   };
 
-  const handleMouseMove = (e) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -10;
-    const rotateY = ((x - centerX) / centerX) * 10;
 
-    gsap.to(card, {
-      rotateX: rotateX,
-      rotateY: rotateY,
-      duration: 0.5,
-      ease: "power2.out",
-      transformPerspective: 1000,
-    });
-  };
-
-  const handleMouseLeave = (e) => {
-    gsap.to(e.currentTarget, {
-      rotateX: 0,
-      rotateY: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    });
-  };
 
   return (
     <AnimatedPage>
@@ -54,8 +28,7 @@ const Organizers = () => {
               <div
                 key={person.id}
                 className={`organizer-card ${isExpanded ? "expanded" : ""}`}
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
+
               >
                 <div className="card-holo-overlay"></div>
                 <div className="image-container">

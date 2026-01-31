@@ -244,10 +244,31 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    /* Reduced from 3rem */
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
   }
 
   .ticker-track {
-    animation-duration: 15s;
+    animation-duration: 20s;
   }
 }
