@@ -231,26 +231,33 @@ export const registrationData = {
 };
 
 export const mediaData = [
+    // {
+    //     id: 1,
+    //     type: "Trailer",
+    //     title: "Official Cinematic Trailer",
+    //     url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube Embed Link
+    //     thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+    // },
+    // {
+    //     id: 2,
+    //     type: "Image",
+    //     title: "Grand Opening Night",
+    //     url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4",
+    //     thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+    // },
+    // {
+    //     id: 3,
+    //     type: "Poster",
+    //     title: "Event Main Poster",
+    //     url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
+    //     thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
+    // },
+    // Add more items as needed...
     {
         id: 1,
-        type: "Trailer",
-        title: "Official Cinematic Trailer",
-        url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube Embed Link
-        thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
-    },
-    {
-        id: 2,
-        type: "Image",
-        title: "Grand Opening Night",
-        url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4",
-        thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
-    },
-    {
-        id: 3,
         type: "Poster",
-        title: "Event Main Poster",
+        title: "RoboWars 2026",
         url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
         thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
-    },
-    // Add more items as needed...
+    }
 ];
