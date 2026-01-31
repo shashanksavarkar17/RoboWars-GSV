@@ -39,7 +39,7 @@ const Home = () => {
               Enter the Arena
             </Link>
             <Link to="/media" className="cta-secondary cta-btn clickable">
-              Watch Trailer
+              Watch Teaser
             </Link>
           </div>
         </div>

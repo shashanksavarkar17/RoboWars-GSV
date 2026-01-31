@@ -7,25 +7,25 @@ import Lehar from "./assets/Lehar.jpg";
 
 export const timelineData = [
     {
-        date: "10 Jan 2025",
+        date: "TBD",
         title: "Registration Opens",
         description: "Early bird registrations begin for all weight categories.",
-        status: "completed"
+        status: "upcoming"
     },
     {
-        date: "05 Feb 2025",
+        date: "TBD",
         title: "Team Briefing",
         description: "Virtual orientation and rulebook clarification session.",
-        status: "active"
+        status: "upcoming"
     },
     {
-        date: "15 Feb 2025",
+        date: "TBD",
         title: "Technical Inspection",
         description: "Safety checks and weight verification of the robots.",
         status: "upcoming"
     },
     {
-        date: "20 Feb 2025",
+        date: "TBD",
         title: "The Main Event",
         description: "Knockout rounds and Grand Finale at the main arena.",
         status: "upcoming"
@@ -215,42 +215,42 @@ export const rulesData = [
 export const homeData = {
     ticker: [
         "Registration is LIVE!",
-        "Prize Pool: ₹1,00,000",
+        "Prize Pool: ₹22,000",
         "Event Date: 20 Feb 2025",
-        "New Weight Category Added"
+        "New Era, New Arena, New Rules"
     ],
     highlights: [
-        { value: "50+", label: "War Robots" },
-        { value: "₹1L+", label: "Prize Pool" },
-        { value: "10K+", label: "Spectators" }
+        { value: "10+", label: "War Robots" },
+        { value: "₹22,000", label: "Prize Pool" },
+        { value: "200+", label: "Spectators" }
     ]
 };
 
 export const registrationData = {
-  formUrl: "https://forms.zohopublic.in/operagxshashank17gm1/form/InternshipStudentInformationForm/formperma/nhMsMjM-26-9jmeUuaQVGJ4e13Ahz8OivB-uFgwY30Y"
+    formUrl: "https://forms.zohopublic.in/operagxshashank17gm1/form/InternshipStudentInformationForm/formperma/nhMsMjM-26-9jmeUuaQVGJ4e13Ahz8OivB-uFgwY30Y"
 };
 
 export const mediaData = [
-  {
-    id: 1,
-    type: "Trailer",
-    title: "Official Cinematic Trailer",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube Embed Link
-    thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
-  },
-  {
-    id: 2,
-    type: "Image",
-    title: "Grand Opening Night",
-    url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4",
-    thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
-  },
-  {
-    id: 3,
-    type: "Poster",
-    title: "Event Main Poster",
-    url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
-    thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
-  },
-  // Add more items as needed...
+    {
+        id: 1,
+        type: "Trailer",
+        title: "Official Cinematic Trailer",
+        url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube Embed Link
+        thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+    },
+    {
+        id: 2,
+        type: "Image",
+        title: "Grand Opening Night",
+        url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4",
+        thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+    },
+    {
+        id: 3,
+        type: "Poster",
+        title: "Event Main Poster",
+        url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
+        thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
+    },
+    // Add more items as needed...
 ];
