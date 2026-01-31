@@ -201,14 +201,15 @@
     top: 100%;
     opacity: 0;
   }
+}
 
-  @media (max-width: 768px) {
-    .organizers-wrapper {
-      padding: 100px 20px 40px;
-    }
-
-    .organizers-title {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
+@media (max-width: 768px) {
+  .organizers-wrapper {
+    padding: 100px 20px 40px;
   }
+
+  .organizers-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
