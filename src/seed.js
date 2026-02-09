@@ -228,7 +228,7 @@ export const homeData = {
 };
 
 export const registrationData = {
-    formUrl: "https://tinyurl.com/6ft3y2kv"
+    formUrl: "https://zfrmz.in/2KkNsGmjyPVnFcdx2PeA"
 };
 
 export const mediaData = [
