@@ -1,3 +1,4 @@
+// Avatars
 import Aman from "./assets/Aman.jpg";
 import Arpit from "./assets/Arpit.jpg";
 import Pranjal from "./assets/Pranjal.png";
@@ -5,6 +6,7 @@ import Saurabh from "./assets/Saurabh.png";
 import Shashank from "./assets/Shashank.jpg";
 import Lehar from "./assets/Lehar.jpg";
 
+// Media
 import Img_01 from "./assets/Img_01.jpeg";
 import Img_02 from "./assets/Img_02.jpeg";
 import Img_03 from "./assets/Img_03.jpeg";
