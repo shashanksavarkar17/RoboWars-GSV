@@ -222,7 +222,7 @@ export const homeData = {
     ],
     highlights: [
         { value: "10+", label: "War Robots" },
-        { value: "", label: "Prize Pool" },
+        { value: "Exciting Cash Prizes!", label: "Prize Pool" },
         { value: "200+", label: "Spectators" }
     ]
 };
