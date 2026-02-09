@@ -7,28 +7,28 @@ import Lehar from "./assets/Lehar.jpg";
 
 export const timelineData = [
     {
-        date: "TBD",
+        date: "11th Feb 2026",
         title: "Registration Opens",
         description: "Early bird registrations begin for all weight categories.",
-        status: "upcoming"
+        status: "Ongoing"
     },
     {
-        date: "TBD",
-        title: "Team Briefing",
+        date: "25th Feb 2026",
+        title: "Registration Ends",
+        description: "Early bird registrations begin for all weight categories.",
+        status: "UPCOMING"
+    },
+    {
+        date: "9th Mar 2026",
+        title: "ROUND 1: Documentation, Bot Verification, and Technical Inspection Round",
         description: "Virtual orientation and rulebook clarification session.",
-        status: "upcoming"
+        status: "UPCOMING"
     },
     {
-        date: "TBD",
-        title: "Technical Inspection",
-        description: "Safety checks and weight verification of the robots.",
-        status: "upcoming"
-    },
-    {
-        date: "TBD",
-        title: "The Main Event",
+        date: "14th Mar 2026",
+        title: "ROUND 2: Knockout Rounds and Grand Finale",
         description: "Knockout rounds and Grand Finale at the main arena.",
-        status: "upcoming"
+        status: "UPCOMING"
     }
 ];
 
@@ -222,7 +222,7 @@ export const homeData = {
     ],
     highlights: [
         { value: "10+", label: "War Robots" },
-        { value: "₹12,000", label: "Prize Pool" },
+        { value: "", label: "Prize Pool" },
         { value: "200+", label: "Spectators" }
     ]
 };
