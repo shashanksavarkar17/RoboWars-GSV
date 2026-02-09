@@ -64,7 +64,7 @@ export const organizersData = [
         id: 4,
         name: "Shashank Savarkar",
         role: "Domain Co-ordinator Robotics & Engg. Dwg. TechnoCrats GSV",
-        work: "Website Author",
+        work: "Event Head",
         image: Shashank,
         phone: "7410075050",
         email: "savarkar.shashank_btech24@gsv.ac.in"
