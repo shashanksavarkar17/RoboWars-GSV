@@ -24,14 +24,12 @@ const Registration = () => {
        location=0,
        status=1,
        scrollbars=1,
-       resizable=1`
+       resizable=1`,
     );
   };
 
   return (
     <>
-
-
       <div className="register-wrapper">
         <div className="register-card google-form-card">
           <span className="step-indicator">Team Registration</span>
@@ -51,8 +49,6 @@ const Registration = () => {
           </div>
         </div>
       </div>
-
-
     </>
   );
 };

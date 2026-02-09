@@ -227,7 +227,7 @@ export const homeData = {
 };
 
 export const registrationData = {
-    formUrl: "https://forms.zohopublic.in/operagxshashank17gm1/form/InternshipStudentInformationForm/formperma/nhMsMjM-26-9jmeUuaQVGJ4e13Ahz8OivB-uFgwY30Y"
+    formUrl: "https://tinyurl.com/6ft3y2kv"
 };
 
 export const mediaData = [

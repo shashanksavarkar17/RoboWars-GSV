@@ -4,12 +4,8 @@ import "./Timeline.css";
 import { timelineData } from "../seed";
 import AnimatedPage from "../components/AnimatedPage";
 
-
-
 const Timeline = () => {
   const lineRef = useRef(null);
-
-
 
   return (
     <AnimatedPage>
@@ -19,7 +15,9 @@ const Timeline = () => {
           <h1>
             BATTLE <span>TIMELINE</span>
           </h1>
-          <p className="description">The path to glory is paved with metal and sparks.</p>
+          <p className="description">
+            The path to glory is paved with metal and sparks.
+          </p>
         </div>
 
         <div className="timeline-container">
@@ -27,10 +25,7 @@ const Timeline = () => {
           <div ref={lineRef} className="timeline-track-fill"></div>
 
           {timelineData.map((item, index) => (
-            <div
-              key={index}
-              className={`timeline-item ${item.status}`}
-            >
+            <div key={index} className={`timeline-item ${item.status}`}>
               <div className="timeline-dot-wrapper">
                 <div className="timeline-dot"></div>
                 <div className="timeline-dot-pulse"></div>
