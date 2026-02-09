@@ -5,6 +5,11 @@ import Saurabh from "./assets/Saurabh.png";
 import Shashank from "./assets/Shashank.jpg";
 import Lehar from "./assets/Lehar.jpg";
 
+import Img_01 from "./assets/Img_01.jpeg";
+import Img_02 from "./assets/Img_02.jpeg";
+import Img_03 from "./assets/Img_03.jpeg";
+import Img_04 from "./assets/Img_04.jpeg";
+
 export const timelineData = [
     {
         date: "11th Feb 2026",
@@ -216,13 +221,13 @@ export const rulesData = [
 export const homeData = {
     ticker: [
         "Registration is LIVE!",
-        "Prize Pool: ₹22,000",
-        "Event Date: 20 Feb 2025",
+        "Exciting Cash Prizes Await!",
+        "Event Date: EPITOME 2026",
         "New Era, New Arena, New Rules"
     ],
     highlights: [
         { value: "10+", label: "War Robots" },
-        { value: "Exciting Cash Prizes!", label: "Prize Pool" },
+        { value: "Exciting Prizes", label: "Prize Pool" },
         { value: "200+", label: "Spectators" }
     ]
 };
@@ -232,33 +237,33 @@ export const registrationData = {
 };
 
 export const mediaData = [
-    // {
-    //     id: 1,
-    //     type: "Trailer",
-    //     title: "Official Cinematic Trailer",
-    //     url: "https://www.youtube.com/embed/dQw4w9WgXcQ", // YouTube Embed Link
-    //     thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
-    // },
-    // {
-    //     id: 2,
-    //     type: "Image",
-    //     title: "Grand Opening Night",
-    //     url: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4",
-    //     thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
-    // },
-    // {
-    //     id: 3,
-    //     type: "Poster",
-    //     title: "Event Main Poster",
-    //     url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
-    //     thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
-    // },
-    // Add more items as needed...
     {
         id: 1,
+        type: "Trailer",
+        title: "Official Cinematic Trailer",
+        url: Img_01, // YouTube Embed Link
+        thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+    },
+    {
+        id: 2,
+        type: "Image",
+        title: "Grand Opening Night",
+        url: Img_02,
+        thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+    },
+    {
+        id: 3,
         type: "Poster",
-        title: "RoboWars 2026",
-        url: "https://images.unsplash.com/photo-1531050171669-a2444781444b",
+        title: "Event Main Poster",
+        url: Img_03,
         thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
-    }
+    },
+    {
+        id: 4,
+        type: "Poster",
+        title: "Event Main Poster",
+        url: Img_04,
+        thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
+    },
+    // Add more items as needed...
 ];
