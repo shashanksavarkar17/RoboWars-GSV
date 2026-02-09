@@ -45,7 +45,7 @@ export const organizersData = [
     {
         id: 2,
         name: "Aman Choudhary",
-        role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
+        role: "Ex-Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
         work: "Event Head",
         image: Aman,
         phone: "7987347287",
@@ -54,7 +54,7 @@ export const organizersData = [
     {
         id: 3,
         name: "Pranjal Chaturvedi",
-        role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+        role: "Domain Head - Robotics & Engg. Dwg. TechnoCrats GSV",
         work: "Event Head",
         image: Pranjal,
         phone: "7878330376",
@@ -62,31 +62,32 @@ export const organizersData = [
     },
     {
         id: 4,
+        name: "Shashank Savarkar",
+        role: "Domain Co-ordinator Robotics & Engg. Dwg. TechnoCrats GSV",
+        work: "Website Author",
+        image: Shashank,
+        phone: "7410075050",
+        email: "savarkar.shashank_btech24@gsv.ac.in"
+    },
+    {
+        id: 5,
         name: "Lehar Gupta",
-        role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+        role: "Domain Member Robotics & Engg. Dwg. TechnoCrats GSV",
         work: "Media Publicity",
         image: Lehar,
         phone: "6376849212",
         email: "lehar.gupta_btech24@gsv.ac.in"
     },
     {
-        id: 5,
+        id: 6,
         name: "Saurabh Ahire",
-        role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
+        role: "Domain Member Profile Developement TechnoCrats GSV",
         work: "Graphics Desginer",
         image: Saurabh,
         phone: "9322040278",
         email: "saurabh.ahire_btech25@gsv.ac.in"
     },
-    {
-        id: 6,
-        name: "Shashank Savarkar",
-        role: "Domain Memeber Robotics & Engg. Dwg. TechnoCrats GSV",
-        work: "Website Author",
-        image: Shashank,
-        phone: "7410075050",
-        email: "savarkar.shashank_btech24@gsv.ac.in"
-    },
+
 ];
 
 export const rulesData = [
@@ -221,7 +222,7 @@ export const homeData = {
     ],
     highlights: [
         { value: "10+", label: "War Robots" },
-        { value: "₹22,000", label: "Prize Pool" },
+        { value: "₹12,000", label: "Prize Pool" },
         { value: "200+", label: "Spectators" }
     ]
 };
