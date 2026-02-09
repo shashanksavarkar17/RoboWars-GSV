@@ -9,7 +9,11 @@ const Rules = () => {
       <div className="rules-page">
         <div className="rules-header">
           <div className="rules-download">
-            <a href="/documents/ROBOWAR 2026_ OFFICIAL RULEBOOK.pdf" download className="download-btn clickable">
+            <a
+              href="../assets/ROBOWAR 2026_ OFFICIAL RULEBOOK.pdf"
+              download
+              className="download-btn clickable"
+            >
               Download Official Rulebook
             </a>
           </div>
@@ -52,7 +56,10 @@ const Rules = () => {
         </div>
 
         <div className="rules-disclaimer">
-          <p>⚠️ Failure to comply with these rules will lead to immediate disqualification.</p>
+          <p>
+            ⚠️ Failure to comply with these rules will lead to immediate
+            disqualification.
+          </p>
         </div>
       </div>
     </AnimatedPage>
