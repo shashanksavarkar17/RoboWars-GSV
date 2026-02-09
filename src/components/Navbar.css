@@ -17,7 +17,7 @@
   max-width: 1200px;
   background: rgba(18, 18, 18, 0.4);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(32px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
@@ -118,8 +118,6 @@
   background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
 }
 
-
-
 /* Hamburger Toggle */
 .hamburger {
   display: none;
@@ -212,7 +210,6 @@
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-
   .desktop-nav,
   .desktop-nav-btn {
     display: none;

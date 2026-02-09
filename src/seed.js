@@ -70,8 +70,8 @@ export const organizersData = [
     {
         id: 4,
         name: "Shashank Savarkar",
-        role: "Domain Co-ordinator Robotics & Engg. Dwg. TechnoCrats GSV",
-        work: "Event Head",
+        role: "Domain Co-ordinator - Robotics & Engg. Dwg. TechnoCrats GSV",
+        work: "Event Head | Website Author",
         image: Shashank,
         phone: "7410075050",
         email: "savarkar.shashank_btech24@gsv.ac.in"
@@ -79,7 +79,7 @@ export const organizersData = [
     {
         id: 5,
         name: "Lehar Gupta",
-        role: "Domain Member Robotics & Engg. Dwg. TechnoCrats GSV",
+        role: "Domain Member - Robotics & Engg. Dwg. TechnoCrats GSV",
         work: "Media Publicity",
         image: Lehar,
         phone: "6376849212",
@@ -88,7 +88,7 @@ export const organizersData = [
     {
         id: 6,
         name: "Saurabh Ahire",
-        role: "Domain Member Profile Developement TechnoCrats GSV",
+        role: "Domain Member - Profile Developement TechnoCrats GSV",
         work: "Graphics Desginer",
         image: Saurabh,
         phone: "9322040278",

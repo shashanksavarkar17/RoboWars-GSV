@@ -6,11 +6,12 @@ const Footer = () => {
     <footer className="footer glass-footer">
       <div className="footer-inner">
         <p className="footer-copy">
-          © 2026 RoboWars EPITOME'26. All Rights Reserved.
+          © 2026 TechnoCrats GSV | RED | EPITOME'26. All Rights Reserved.
         </p>
 
         <div className="footer-logo">
-          <img src="./assets/RED_LOGO.png" alt="RoboWars EPITOME 26" />
+          {/* <img src="./assets/RED_LOGO.png" alt="RoboWars EPITOME 26" /> */}
+          <p>RoboWars EPITOME'26</p>
         </div>
 
         <div className="footer-bottom">
