@@ -239,31 +239,31 @@ export const registrationData = {
 export const mediaData = [
     {
         id: 1,
-        type: "Trailer",
-        title: "Official Cinematic Trailer",
-        url: Img_01, // YouTube Embed Link
-        thumb: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+        type: "Image",
+        title: "Image 01",
+        url: Img_01,
+        thumb: Img_01
     },
     {
         id: 2,
         type: "Image",
-        title: "Grand Opening Night",
+        title: "Image 02",
         url: Img_02,
-        thumb: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+        thumb: Img_02
     },
     {
         id: 3,
-        type: "Poster",
-        title: "Event Main Poster",
+        type: "Image",
+        title: "Image 03",
         url: Img_03,
-        thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
+        thumb: Img_03
     },
     {
         id: 4,
-        type: "Poster",
-        title: "Event Main Poster",
+        type: "Image",
+        title: "Image 04",
         url: Img_04,
-        thumb: "https://images.unsplash.com/photo-1531050171669-a2444781444b"
+        thumb: Img_04
     },
     // Add more items as needed...
 ];
