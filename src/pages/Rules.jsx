@@ -3,6 +3,8 @@ import "./Rules.css";
 import { rulesData } from "../seed";
 import AnimatedPage from "../components/AnimatedPage";
 
+import Rulebook from "../assets/ROBOWAR 2026_ OFFICIAL RULEBOOK.pdf";
+
 const Rules = () => {
   return (
     <AnimatedPage>
