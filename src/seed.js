@@ -47,7 +47,7 @@ export const organizersData = [
         work: "Event Head",
         image: Arpit,
         phone: "9696579460",
-        email: "aman.choudhary_btech23@gsv.ac.in"
+        email: "arpit.srivastava_btech23@gsv.ac.in"
     },
     {
         id: 2,
@@ -56,7 +56,7 @@ export const organizersData = [
         work: "Event Head",
         image: Aman,
         phone: "7987347287",
-        email: "arpit.srivastava_btech23@gsv.ac.in"
+        email: "aman.choudhary_btech23@gsv.ac.in "
     },
     {
         id: 3,

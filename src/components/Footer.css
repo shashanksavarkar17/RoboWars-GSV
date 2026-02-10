@@ -74,9 +74,16 @@
   box-shadow: 0 10px 20px rgba(220, 38, 38, 0.4);
 }
 
-.clg { background-image: url("../assets/GSV.png"); }
-.ig-red, .ig-tc { background-image: url("../assets/IG.png"); }
-.linkedin { background-image: url("../assets/LI.jpg"); }
+.clg {
+  background-image: url("../assets/GSV.png");
+}
+.ig-red,
+.ig-tc {
+  background-image: url("../assets/IG.png");
+}
+.linkedin {
+  background-image: url("../assets/LI.jpg");
+}
 
 .footer-terms {
   font-size: 0.8rem;
@@ -97,7 +104,9 @@
     gap: 30px;
   }
 
-  .footer-copy, .footer-bottom, .footer-logo {
+  .footer-copy,
+  .footer-bottom,
+  .footer-logo {
     justify-self: center;
     align-items: center;
   }
