@@ -7,7 +7,7 @@ const Media = () => {
   const [filter, setFilter] = useState("All");
   const [selectedMedia, setSelectedMedia] = useState(null);
 
-  const categories = ["All", "Video", "Image", "Trailer", "Teaser", "Poster"];
+  const categories = ["All", "Video", "Image"];
 
   const filteredMedia =
     filter === "All"

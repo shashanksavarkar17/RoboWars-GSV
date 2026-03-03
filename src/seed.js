@@ -11,6 +11,8 @@ import Img_01 from "./assets/Img_01.jpeg";
 import Img_02 from "./assets/Img_02.jpeg";
 import Img_03 from "./assets/Img_03.jpeg";
 import Img_04 from "./assets/Img_04.jpeg";
+import Vid_01 from "./assets/RoboWars 2.0 Teaser.mp4";
+import Vid_01_thumb from "./assets/Whatsapp Grp Pic.png";
 
 export const timelineData = [
     {
@@ -266,6 +268,13 @@ export const mediaData = [
         title: "Image 04",
         url: Img_04,
         thumb: Img_04
+    },
+    {
+        id: 5,
+        type: "Video",
+        title: "Video 01",
+        url: Vid_01,
+        thumb: Vid_01_thumb
     },
     // Add more items as needed...
 ];
